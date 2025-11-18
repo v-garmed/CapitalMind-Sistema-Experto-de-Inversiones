@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CapitalMind · Sistema Experto de Inversiones</title>
+  <!-- Hoja de estilos principal -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body data-theme="1">
+  <!-- Fondo dinámico Liquid Crystal / Lava Lamp -->
+  <div class="lava-bg">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+
+  <!-- Selector de variaciones de diseño -->
+  <div class="theme-switcher" aria-label="Cambiar tema de interfaz">
+    <button class="theme-button" data-theme="1" title="Tema Azul / Morado"></button>
+    <button class="theme-button" data-theme="2" title="Tema Verde / Azul"></button>
+    <button class="theme-button" data-theme="3" title="Tema Oscuro / Plata"></button>
+  </div>
+
+  <div class="app-shell">
+    <!-- SIDEBAR estilo ChatGPT, fija a la izquierda -->
+    <aside class="sidebar" aria-label="Navegación principal">
+      <div class="sidebar-inner">
+        <div class="sidebar-header">
+          <div class="sidebar-logo-circle">CM</div>
+          <div class="sidebar-brand">
+            <span class="brand-title">CapitalMind</span>
+            <span class="brand-subtitle">Sistema Experto</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <button class="nav-item nav-item-active">
+            <span class="nav-dot"></span>
+            Nueva consulta
+          </button>
+          <button class="nav-item">Historial de decisiones</button>
+          <button class="nav-item">Portafolio simulado</button>
+          <button class="nav-item">Reglas financieras</button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="sidebar-footer-label">Modo experto</div>
+          <div class="sidebar-footer-pill">
+            Perfil: Conservador · MXN
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ÁREA DE CHAT estilo ChatGPT -->
+    <main class="chat-layout">
+      <section class="chat-main is-empty" aria-label="Área de conversación">
+        <!-- Estado inicial tipo ChatGPT -->
+        <div class="chat-empty-state">
+          <div class="empty-icon">₿</div>
+          <h1 class="empty-title">¿Qué inversión harás hoy?</h1>
+          <p class="empty-subtitle">
+            Explora escenarios, combina instrumentos y deja que tu Sistema Experto te guíe
+            hacia decisiones más claras y conscientes.
+          </p>
+
+          <div class="empty-suggestions">
+            <button class="suggestion-pill">Simular CETES a 1 año</button>
+            <button class="suggestion-pill">Comparar riesgo vs rendimiento</button>
+            <button class="suggestion-pill">Diseñar portafolio mixto</button>
+          </div>
+        </div>
+
+        <!-- Contenedor de mensajes (estructura tipo ChatGPT, por ahora solo ejemplos) -->
+        <div class="chat-messages">
+          <div class="message-row user">
+            <div class="message-bubble">
+              <span class="message-label">Tú</span>
+              <p>Quiero invertir 5,000 MXN mensuales con riesgo bajo, ¿qué me recomiendas?</p>
+            </div>
+          </div>
+          <div class="message-row assistant">
+            <div class="message-bubble">
+              <span class="message-label">CapitalMind</span>
+              <p>
+                Puedo evaluar CETES, bonos gubernamentales y fondos de deuda de baja
+                volatilidad. ¿Deseas priorizar liquidez mensual o rendimiento a largo plazo?
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Caja de entrada inferior, tipo ChatGPT -->
+  <div class="chat-input-wrapper">
+    <form class="chat-input-bar" aria-label="Entrada de mensaje (decorativa)" onsubmit="return false;">
+      <textarea
+        class="chat-input-field"
+        rows="1"
+        placeholder="Describe tu escenario de inversión... (visual, sin envío real)"
+        disabled
+      ></textarea>
+      <button type="button" class="chat-input-send" disabled>Enviar</button>
+    </form>
+    <p class="chat-input-hint">
+      Interfaz de ejemplo · Sin IA activa · No se procesan mensajes en esta versión.
+    </p>
+  </div>
+
+  <!-- JS principal del front (solo temas/variaciones visuales) -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
